@@ -9,6 +9,22 @@ interface Props {
 const { title, description = 'Kıvanç Tatar personal website' } = Astro.props as Props;
 const pathname = Astro.url.pathname;
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const normalizePath = (path: string) => {
+  const normalized = path === '/' ? '/' : path.replace(/\/+$/, '');
+  return normalized || '/';
+};
+const homePath = normalizePath(baseUrl);
+const isHomePage = () => normalizePath(pathname) === homePath;
+const isCurrentPage = (href: string) => {
+  if (href === '') {
+    return isHomePage();
+  }
+
+  const target = normalizePath(`${baseUrl}${href}`);
+  const current = normalizePath(pathname);
+
+  return current === target || current.startsWith(`${target}/`);
+};
 const navigation = [
   { href: '', label: 'News' },
   { href: 'projects', label: 'Projects' },
@@ -35,7 +51,7 @@ const navigation = [
         <a class="site-title" href={baseUrl}>Kıvanç Tatar</a>
         <nav class="site-nav" aria-label="Primary">
           {navigation.map((item) => (
-            <a href={`${baseUrl}${item.href}`} aria-current={pathname === `${baseUrl}${item.href}` ? 'page' : undefined}>
+            <a href={`${baseUrl}${item.href}`} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>
               {item.label}
             </a>
           ))}
