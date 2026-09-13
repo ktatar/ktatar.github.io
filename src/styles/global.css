@@ -1058,4 +1058,18 @@ main {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .project-card.has-thumbnail .project-card-body {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+    gap: 0.8rem;
+  }
+
+  .project-card.has-thumbnail .project-card-content {
+    padding: 0;
+  }
+
+  .project-card-thumbnail {
+    aspect-ratio: 16 / 9;
+  }
 }
