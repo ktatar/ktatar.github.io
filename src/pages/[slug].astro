@@ -63,7 +63,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
 
       {web3FormsKey && (
         <>
-        <script src="https://web3forms.com/client/script.js" async defer></script>
+        <script is:inline src="https://web3forms.com/client/script.js" async defer></script>
         <script is:inline>
           (() => {
             const form = document.getElementById('contact-form');

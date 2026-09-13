@@ -139,7 +139,7 @@ const tags = collectProjectTags(projects).map((tag) => ({
     }
   </style>
 
-  <script type="module">
+  <script is:inline>
     function setupProjectFilters() {
       const filterInputs = Array.from(document.querySelectorAll('input[name="project-filter"]'));
       const filterChips = Array.from(document.querySelectorAll('.filter-chip'));
