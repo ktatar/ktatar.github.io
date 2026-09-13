@@ -85,7 +85,15 @@ function isExternalUrl(url: string) {
     <div class="publication-list">
       {recentPublications.map((publication) => (
         <article class="publication-item">
-          <p class="publication-title home-publication-title">{publication.title}</p>
+          <p class="publication-title home-publication-title">
+            {publication.url ? (
+              <a href={publication.url} target="_blank" rel="noreferrer">
+                {publication.title}
+              </a>
+            ) : (
+              publication.title
+            )}
+          </p>
           <p class="publication-citation">{formatPublicationCitationAcm(publication)}</p>
         </article>
       ))}
