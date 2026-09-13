@@ -608,6 +608,23 @@ main {
   z-index: 3;
 }
 
+.card-meta-row {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.card-meta-row .tag-row {
+  min-width: 0;
+}
+
+.card-meta-row .card-date {
+  margin: 0 0 0 auto;
+  white-space: nowrap;
+}
+
 .tag,
 .filter-chip {
   display: inline-flex;
