@@ -1070,6 +1070,6 @@ main {
   }
 
   .project-card-thumbnail {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1 / 1;
   }
 }
