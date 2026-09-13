@@ -17,7 +17,8 @@ const projects = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     status: z.enum(['current', 'archive', 'highlights']),
-    tags: z.array(z.string())
+    tags: z.array(z.string()),
+    thumbnail: z.string().optional()
   })
 });
 

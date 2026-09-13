@@ -8,6 +8,7 @@ export type ProjectEntry = {
     date: Date;
     status: 'current' | 'archive' | 'highlights';
     tags: string[];
+    thumbnail?: string;
   };
 };
 
@@ -20,7 +21,8 @@ export async function loadProjects() {
       description: project.data.description,
       date: project.data.date,
       status: project.data.status,
-      tags: project.data.tags
+      tags: project.data.tags,
+      thumbnail: project.data.thumbnail
     }
   })) satisfies ProjectEntry[];
 }
