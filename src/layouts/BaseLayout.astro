@@ -8,14 +8,15 @@ interface Props {
 
 const { title, description = 'Kıvanç Tatar personal website' } = Astro.props as Props;
 const pathname = Astro.url.pathname;
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const navigation = [
-  { href: '/', label: 'News' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/publications', label: 'Publications' },
-  { href: '/bio', label: 'Bio' },
-  { href: '/press', label: 'Press' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' }
+  { href: '', label: 'News' },
+  { href: 'projects', label: 'Projects' },
+  { href: 'publications', label: 'Publications' },
+  { href: 'bio', label: 'Bio' },
+  { href: 'press', label: 'Press' },
+  { href: 'blog', label: 'Blog' },
+  { href: 'contact', label: 'Contact' }
 ];
 ---
 <!doctype html>
@@ -24,17 +25,17 @@ const navigation = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href={`${baseUrl}favicon.svg`} />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <title>{title}</title>
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <a class="site-title" href="/">Kıvanç Tatar</a>
+        <a class="site-title" href={baseUrl}>Kıvanç Tatar</a>
         <nav class="site-nav" aria-label="Primary">
           {navigation.map((item) => (
-            <a href={item.href} aria-current={pathname === item.href ? 'page' : undefined}>
+            <a href={`${baseUrl}${item.href}`} aria-current={pathname === `${baseUrl}${item.href}` ? 'page' : undefined}>
               {item.label}
             </a>
           ))}

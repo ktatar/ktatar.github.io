@@ -30,13 +30,13 @@ export async function loadNews() {
       const { Content } = await render(entry);
 
       return {
-        slug: entry.slug,
+        slug: entry.id,
         data: {
           title: entry.data.title,
           date: entry.data.date,
           link: entry.data.link
         },
-        hasBody: entry.body.trim().length > 0,
+        hasBody: (entry.body ?? '').trim().length > 0,
         Content
       };
     })

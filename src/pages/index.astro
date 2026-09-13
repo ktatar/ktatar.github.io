@@ -7,7 +7,7 @@ import { loadProjects, sortProjects } from '../lib/projects';
 import { loadLatestNews } from '../lib/news';
 
 const pages = await getCollection('pages');
-const homePage = pages.find((page) => page.slug === 'home');
+const homePage = pages.find((page) => page.id === 'home');
 const projects = sortProjects(await loadProjects());
 const currentProjects = projects.filter((project) => project.data.status === 'current').slice(0, 4);
 const recentPublications = loadPublications().slice(0, 4);

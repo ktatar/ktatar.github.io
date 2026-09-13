@@ -1,3 +1,5 @@
+name: ktatar-github-io
+
 services:
   web:
     build:
@@ -8,10 +10,9 @@ services:
     volumes:
       - .:/app
       - node_modules:/app/node_modules
+      - /app/.astro
     env_file:
       - local.env
-    environment:
-      CHOKIDAR_USEPOLLING: "true"
     command: sh -lc "rm -f .astro/dev.json && exec npm run dev -- --host 0.0.0.0 --port 4321"
 
 volumes:

@@ -55,8 +55,9 @@ async function copyAsset(markdownFile, reference) {
   const normalizedReference = normalizeReference(reference);
   const resolvedSource = path.resolve(path.dirname(markdownFile), normalizedReference);
 
+  let sourceStat;
   try {
-    await fs.access(resolvedSource);
+    sourceStat = await fs.stat(resolvedSource);
   } catch {
     return null;
   }
@@ -67,8 +68,16 @@ async function copyAsset(markdownFile, reference) {
   const outputFolder = path.join(outputDir, sanitizeSegment(relativeFolder), sanitizeSegment(markdownStem));
   const destination = path.join(outputFolder, path.basename(resolvedSource));
 
-  await fs.mkdir(path.dirname(destination), { recursive: true });
-  await fs.copyFile(resolvedSource, destination);
+  try {
+    const destStat = await fs.stat(destination);
+    if (destStat.size !== sourceStat.size) {
+      await fs.mkdir(path.dirname(destination), { recursive: true });
+      await fs.copyFile(resolvedSource, destination);
+    }
+  } catch {
+    await fs.mkdir(path.dirname(destination), { recursive: true });
+    await fs.copyFile(resolvedSource, destination);
+  }
 
   const publicPath = path.posix.join('/content-images', sanitizeSegment(relativeFolder), sanitizeSegment(markdownStem), path.basename(resolvedSource));
   return publicPath;
@@ -110,8 +119,11 @@ async function main() {
   const files = await walk(contentDir);
 
   for (const file of files) {
+    const originalContent = await fs.readFile(file, 'utf8');
     const updatedContent = await processMarkdownFile(file);
-    await fs.writeFile(file, updatedContent, 'utf8');
+    if (updatedContent !== originalContent) {
+      await fs.writeFile(file, updatedContent, 'utf8');
+    }
   }
 }
 
