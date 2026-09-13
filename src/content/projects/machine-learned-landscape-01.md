@@ -5,8 +5,8 @@ description:
 date: 2019-10
 status: archive
 tags:
-  - Lecture
-  - Musical AI
+  - Video Art
+  - Visual AI
 ---
 
 <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">

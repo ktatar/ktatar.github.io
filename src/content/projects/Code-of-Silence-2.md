@@ -7,6 +7,7 @@ tags:
   - Live Performance
   - Improvised Music
   - Graphic Score
+thumbnail: /content-images/projects/code-of-silence-2/code_of_silence_no-2_page_2.jpg
 ---
 
 <div class="image-row">

@@ -6,6 +6,7 @@ status: archive
 tags:
   - Live Performance
   - Improvised Music
+thumbnail: /content-images/projects/Intonarumori/mashup_wm.jpg
 ---
 
 Weekly Intonarumori Series <br>

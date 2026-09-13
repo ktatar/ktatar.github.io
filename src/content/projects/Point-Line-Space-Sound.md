@@ -7,6 +7,7 @@ tags:
   - Live Performance
   - Improvised Music
   - Trumpet
+thumbnail: /content-images/projects/bauhaus-impact.png
 ---
 
 <iframe src="https://player.vimeo.com/video/57208307?color=ffffff" title="Point, Line, Space and Sound" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen style="display:block; margin:1.5rem auto; width:min(100%, 742px); aspect-ratio:16/9; height:auto;"> </iframe>

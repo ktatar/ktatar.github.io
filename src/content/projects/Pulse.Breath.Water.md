@@ -7,8 +7,12 @@ tags:
   - Virtual Reality
   - Musical AI
   - Movement Computing
-
+thumbnail: /content-images/projects/Pulse.Breath.Water/pbw.png 
 ---
+
+<img src="/content-images/projects/Pulse.Breath.Water/pbw.png
+" alt="Pulse.Breath.Water" style="display:block; margin:0 auto; max-width:500px; height:auto;" />
+
 
 Pulse Breath Water, an interactive art piece that brings together three components: an immersive virtual environment (via Oculus Rift), embodied interaction (via breathing), and a reactive musical agent to generate unique experiences of the virtual world unified with the AI generated sonic environment.
 

@@ -7,7 +7,7 @@ tags:
   - Neural Audio Synthesis
   - Musical AI
   - Research
-
+thumbnail: /content-images/projects/latent-timbre-synthesis/lts_full_latent_space_scatter.png
 ---
 
 ## Description

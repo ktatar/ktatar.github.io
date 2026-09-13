@@ -3,13 +3,12 @@ title: "Exposing the Bias in AI: Digital Assemblage"
 description: An audiovisual performance exposing how AI systems encode gendered and demographic associations.
 date: 2026-03-01
 status: current
-thumbnail: /content-images/projects/project-thumbnails/exposing-the-bias-in-ai-digital-assemblage.png
+thumbnail: /content-images/projects/exposing-the-bias-in-ai-digital-assemblage/exposing-da.png
 tags:
   - Live Performance
   - Audiovisual
   - Visual AI
   - Voice AI
-
 ---
 
 *What is human?

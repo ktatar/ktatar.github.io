@@ -7,6 +7,7 @@ tags:
   - Virtual Reality
   - Dance
   - Live Performance
+thumbnail: /content-images/projects/poema/1POEMA-837-1x1.jpg
 ---
 
 <small>@Oi Futuro, Rio de Janeiro, Brazil<br>presented at the Rio Olympics 2016</small>

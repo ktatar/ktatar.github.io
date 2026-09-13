@@ -9,7 +9,7 @@ tags:
   - Musical AI
   - Interactive Arts
   - Dance
-  
+thumbnail: /content-images/projects/plastic-biosphere/pb-1.1.jpg  
 ---
 
 Plastic Biosphere is a series of artworks that highlights the imperative coexistence of humankind and the material, plastics. In the anthropocene era, humankind created over 300 million tons of plastic every year, and this production has become a geophysical force of nature. The ubiquitous material extends beyond our reach and control, creating its own life-cycles, existing as an unignorable element of the biosphere.

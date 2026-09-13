@@ -8,7 +8,7 @@ tags:
   - Musical AI
   - Movement Computing
   - Research
-
+thumbnail: /content-images/projects/ramfem/movement_audio.png
 ---
 
 **Authors**

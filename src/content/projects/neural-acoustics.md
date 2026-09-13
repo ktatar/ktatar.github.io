@@ -7,6 +7,7 @@ tags:
   - Neural Audio Synthesis
   - Musical AI
   - Research
+thumbnail: /content-images/projects/neural-acoustics/2024-aimc-neuralacoustics.jpg
 ---
 
 | Author | Affiliation |

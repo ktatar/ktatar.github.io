@@ -8,6 +8,7 @@ tags:
   - Interactive Arts
   - Musical AI
   - Movement Computing
+thumbnail: /content-images/projects/respire/Respire_diagram-1x1.png
 ---
 
 <small>by Kıvanç Tatar, Mirjana Prpa, and Philippe Pasquier<small>

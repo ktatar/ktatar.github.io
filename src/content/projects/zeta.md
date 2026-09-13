@@ -8,6 +8,7 @@ tags:
   - Interactive Art
   - Musical AI
   - Audiovisual
+thumbnail: /content-images/projects/zeta/zeta-1x1.png
 ---
 
 <iframe

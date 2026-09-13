@@ -7,6 +7,7 @@ tags:
   - Live Performance
   - Improvised Music
   - Trumpet
+thumbnail: /content-images/projects/miam-noise-collective.jpg
 ---
 <small>MIAM, İstanbul, Turkey </small>
 

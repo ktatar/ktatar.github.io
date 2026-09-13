@@ -11,7 +11,7 @@ const homePage = pages.find((page) => page.id === 'home');
 const projects = sortProjects(await loadProjects());
 const currentProjects = projects.filter((project) => project.data.status === 'current').slice(0, 4);
 const recentPublications = loadPublications().slice(0, 4);
-const latestNews = await loadLatestNews(4);
+const latestNews = await loadLatestNews(6);
 
 function formatNewsDate(date: string | Date) {
   const parsed = date instanceof Date ? date : new Date(date);

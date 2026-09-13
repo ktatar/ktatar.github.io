@@ -6,6 +6,7 @@ status: highlights
 tags:
   - Live Performance
   - Musical AI
+thumbnail: /content-images/projects/coding-the-latent/on-the-fly-1x1.jpg
 ---
 
 Coding the Latent No.1 is a live performance that brings together live coding and Artificial Intelligence based audio generation. The performance is an experimental approach to hack AI models using live coding. The AI model organizes a latent space of audio chunks, and live coding functions as a tool to explore the latent audio space. The approach builds on musical improvisation practice, while emphasizing proactivity, over reactivity and immediate musical reactions. Live coding becomes a tool for hacking the AI model in a live sonic design setting, while proactively planning compositional layers. This first edition of the Coding the Latent series invites the audience to a glitchy and noisy world of AI synthesized sounds, spatialized on 47 speakers.
