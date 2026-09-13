@@ -650,7 +650,7 @@ main {
 
 .project-filter-row .current-tag-highlight:not([aria-pressed='true']),
 .tag-row .current-tag-highlight {
-  background: #ffe14a13;
+  background: #ffe14a18;
   border-color: var(--border-strong);
   color: #3a2432;
 }
