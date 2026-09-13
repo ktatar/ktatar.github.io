@@ -522,11 +522,16 @@ main {
   padding: 1.15rem;
 }
 
-.project-card.has-thumbnail {
+.project-card-body {
+  display: grid;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.project-card.has-thumbnail .project-card-body {
   grid-template-columns: minmax(0, 1fr) 1fr;
   gap: 0;
   aspect-ratio: 2 / 1;
-  padding: 0;
   overflow: hidden;
 }
 

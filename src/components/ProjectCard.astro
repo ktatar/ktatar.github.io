@@ -18,26 +18,28 @@ const currentTagSet = new Set(currentTags);
   data-tags={project.data.tags.map((tag) => tag.toLowerCase()).join('|')}
 >
   <a class="card-surface-link" href={href} aria-label={`Open project ${project.data.title}`}></a>
-  {project.data.thumbnail && (
-    <div class="project-card-thumbnail">
-      <img src={project.data.thumbnail} alt="" />
-    </div>
-  )}
-  <div class="project-card-content">
-    <h3 class="card-title">{project.data.title}</h3>
-    <p class="card-summary">{project.data.description}</p>
-    <div class="card-meta-row">
-      <div class="tag-row" aria-label="Project tags">
-        {project.data.tags.map((tag) => {
-          const shouldHighlightTag = highlightCurrentTags || currentTagSet.has(tag);
-          return (
-            <a class={`tag tag-link${shouldHighlightTag ? ' current-tag-highlight' : ''}`} href={`/projects?tag=${slugifyTag(tag)}`}>
-              {tag}
-            </a>
-          );
-        })}
+  <h3 class="card-title">{project.data.title}</h3>
+  <div class="project-card-body">
+    {project.data.thumbnail && (
+      <div class="project-card-thumbnail">
+        <img src={project.data.thumbnail} alt="" />
       </div>
-      <p class="card-date">{new Date(project.data.date).getFullYear()}</p>
+    )}
+    <div class="project-card-content">
+      <p class="card-summary">{project.data.description}</p>
+      <div class="card-meta-row">
+        <div class="tag-row" aria-label="Project tags">
+          {project.data.tags.map((tag) => {
+            const shouldHighlightTag = highlightCurrentTags || currentTagSet.has(tag);
+            return (
+              <a class={`tag tag-link${shouldHighlightTag ? ' current-tag-highlight' : ''}`} href={`/projects?tag=${slugifyTag(tag)}`}>
+                {tag}
+              </a>
+            );
+          })}
+        </div>
+        <p class="card-date">{new Date(project.data.date).getFullYear()}</p>
+      </div>
     </div>
   </div>
 </article>
