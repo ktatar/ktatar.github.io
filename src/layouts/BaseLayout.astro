@@ -9,6 +9,7 @@ interface Props {
 const { title, description = 'Kıvanç Tatar personal website' } = Astro.props as Props;
 const pathname = Astro.url.pathname;
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const umamiWebsiteId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
 const normalizePath = (path: string) => {
   const normalized = path === '/' ? '/' : path.replace(/\/+$/, '');
   return normalized || '/';
@@ -44,6 +45,7 @@ const navigation = [
     <link rel="icon" href={`${baseUrl}favicon.svg`} />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <title>{title}</title>
+    {umamiWebsiteId && <script defer src="https://cloud.umami.is/script.js" data-website-id={umamiWebsiteId}></script>}
   </head>
   <body>
     <div class="page-shell">
