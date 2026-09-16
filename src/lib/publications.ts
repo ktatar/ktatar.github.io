@@ -14,6 +14,7 @@ export type Publication = {
   url: string;
   doi: string;
   note: string;
+  highlight: boolean;
 };
 
 const groupLabels: Record<string, string> = {
@@ -45,7 +46,7 @@ function parseAuthors(value: string) {
 }
 
 function formatVenue(tags: Record<string, string>) {
-  return firstDefined([tags.journal, tags.booktitle, tags.publisher, tags.school, tags.organization, tags.note]);
+  return stripBraces(firstDefined([tags.journal, tags.booktitle, tags.publisher, tags.school, tags.organization, tags.note]));
 }
 
 function normalizeGroup(tags: Record<string, string>, type: string) {
@@ -94,7 +95,8 @@ export function loadPublications() {
       venue: formatVenue(tags),
       url: firstDefined([tags.url, tags.doi ? `https://doi.org/${stripBraces(tags.doi)}` : '']),
       doi: stripBraces(firstDefined([tags.doi])),
-      note: firstDefined([tags.note])
+      note: stripBraces(firstDefined([tags.note])),
+      highlight: stripBraces(firstDefined([tags.highlight])).toLowerCase() === 'true'
     } satisfies Publication;
   });
 
@@ -128,6 +130,24 @@ export function groupPublications(publications: Publication[]) {
       const order = ['journal', 'conference', 'manuscript', 'book', 'thesis', 'misc'];
       return order.indexOf(left.group) - order.indexOf(right.group);
     });
+}
+
+export function groupPublicationsByYear(publications: Publication[]) {
+  const grouped = new Map<number | null, Publication[]>();
+
+  for (const publication of publications) {
+    const items = grouped.get(publication.year) ?? [];
+    items.push(publication);
+    grouped.set(publication.year, items);
+  }
+
+  return Array.from(grouped.entries())
+    .map(([year, items]) => ({
+      year,
+      label: year ? `${year}` : 'Undated',
+      items
+    }))
+    .sort((left, right) => (right.year ?? 0) - (left.year ?? 0));
 }
 
 function toInitials(name: string) {
@@ -181,7 +201,9 @@ export function formatPublicationCitationAcm(publication: Publication) {
   const yearText = publication.year ? `${publication.year}.` : 'n.d.';
   const titleText = publication.title ? `${publication.title}.` : '';
   const venuePrefix = publication.type === 'inproceedings' ? 'In ' : '';
-  const venueText = publication.venue ? `${venuePrefix}${publication.venue}.` : '';
+  const shouldHighlightVenue = publication.group === 'journal' || publication.group === 'conference';
+  const venueLabel = shouldHighlightVenue && publication.venue ? `<b>${publication.venue}</b>` : publication.venue;
+  const venueText = publication.venue ? `${venuePrefix}${venueLabel}.` : '';
   const noteText = publication.note ? `${stripBraces(publication.note)}.` : '';
   const doiText = publication.doi ? `DOI:${publication.doi}.` : '';
 

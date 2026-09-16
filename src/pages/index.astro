@@ -10,7 +10,7 @@ const pages = await getCollection('pages');
 const homePage = pages.find((page) => page.id === 'home');
 const projects = sortProjects(await loadProjects());
 const currentProjects = projects.filter((project) => project.data.status === 'current').slice(0, 4);
-const recentPublications = loadPublications().slice(0, 4);
+const highlightedPublications = loadPublications().filter((publication) => publication.highlight);
 const latestNews = await loadLatestNews(6);
 
 function formatNewsDate(date: string | Date) {
@@ -79,11 +79,11 @@ function isExternalUrl(url: string) {
 
   <section class="section">
     <div class="section-header">
-      <h2 class="section-heading">Recent publications</h2>
+      <h2 class="section-heading">Highlighted publications</h2>
       <a class="inline-link" href="/publications">View bibliography</a>
     </div>
     <div class="publication-list">
-      {recentPublications.map((publication) => (
+      {highlightedPublications.map((publication) => (
         <article class="publication-item">
           <p class="publication-title home-publication-title">
             {publication.url ? (
@@ -93,8 +93,19 @@ function isExternalUrl(url: string) {
             ) : (
               publication.title
             )}
+            {publication.url && (
+              <a
+                class="publication-link-icon"
+                href={publication.url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Link to ${publication.title}`}
+              >
+                <i class="fa-solid fa-link"></i>
+              </a>
+            )}
           </p>
-          <p class="publication-citation">{formatPublicationCitationAcm(publication)}</p>
+          <p class="publication-citation" set:html={formatPublicationCitationAcm(publication)} />
         </article>
       ))}
     </div>
