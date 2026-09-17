@@ -683,6 +683,7 @@ main {
 
 .tag-link {
   text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
 }
 
 .filter-chip {
@@ -710,6 +711,10 @@ main {
 
 .project-filter-row .current-tag-highlight:not([aria-pressed='true']):hover,
 .tag-row .current-tag-highlight:hover {
+  color: var(--accent);
+}
+
+.tag-link:hover {
   color: var(--accent);
 }
 
