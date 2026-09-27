@@ -1,6 +1,6 @@
 ---
 title: Musebots for PROCJAM 2015
-description: The first live performance of the MASOM system, where I am improvising with a musical AI agent in Vancouver BC, Canada.
+description: A Musical Multiagent System with agents by Oliver Bown, Ben Carey, Arne Eigenfeldt, Toby Gifford, and me.
 date: 2015-11
 status: archive
 tags:

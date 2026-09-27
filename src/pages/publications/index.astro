@@ -1,23 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { formatPublicationCitationAcm, groupPublications, loadPublications } from '../../lib/publications';
+import { formatPublicationCitationAcm, groupPublicationsByYear, loadPublications } from '../../lib/publications';
 
 const publications = loadPublications();
-const groups = groupPublications(publications);
+const groups = groupPublicationsByYear(publications);
 ---
 <BaseLayout title="Publications | Kıvanç Tatar" description="Publications rendered from a BibTeX source file.">
   <section class="hero" style="padding-bottom: 1.5rem;">
-    <div class="hero-grid">
-      <div class="hero-panel prose">
-        <h1>Publications</h1> 
-      </div>
+    <div class="hero-panel prose publications-hero-panel">
+      <h1>Publications</h1>
     </div>
   </section>
 
   <div class="publication-list">
     {groups.map((group) => (
       <section class="section publication-group">
-        <h2>{group.label}</h2>
+        <h2 class="section-heading">{group.label}</h2>
         <div class="publication-list">
           {group.items.map((publication) => (
             <article class="publication-item">
@@ -29,13 +27,19 @@ const groups = groupPublications(publications);
                 ) : (
                   publication.title
                 )}
+                {publication.url && (
+                  <a
+                    class="publication-link-icon"
+                    href={publication.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Link to ${publication.title}`}
+                  >
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                )}
               </p>
-              <p class="publication-citation">{formatPublicationCitationAcm(publication)}</p>
-              {publication.url && (
-                <a class="card-link" href={publication.url} target="_blank" rel="noreferrer">
-                  Link
-                </a>
-              )}
+              <p class="publication-citation" set:html={formatPublicationCitationAcm(publication)} />
             </article>
           ))}
         </div>
@@ -43,3 +47,13 @@ const groups = groupPublications(publications);
     ))}
   </div>
 </BaseLayout>
+
+<style is:global>
+  .publications-hero-panel {
+    max-width: none;
+  }
+
+  .publication-group .section-heading {
+    color: var(--very-muted);
+  }
+</style>

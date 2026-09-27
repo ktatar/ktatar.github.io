@@ -5,7 +5,7 @@ description:
 date: 2018-12
 status: archive
 tags:
-  - Interactive Art
+  - Interactive Arts
   - Musical AI
   - Audiovisual
 thumbnail: /content-images/projects/zeta/zeta-1x1.png
