@@ -175,7 +175,8 @@ img {
 }
 
 .prose .media-grid img,
-.prose .media-grid iframe {
+.prose .media-grid iframe,
+.prose .media-grid video {
   display: block;
   width: 100%;
 }

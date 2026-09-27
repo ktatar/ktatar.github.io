@@ -15,40 +15,38 @@ An iterative design process was used in the work that the composition consists o
 
 <div class="media-grid">
   <div class="media-grid-item">
-    <iframe
+  <p style="margin:0; text-align:center;">If video does not appear, please view on <a href="https://objkt.com/tokens/hicetnunc/726711" target="_blank" rel="noopener noreferrer">OBJKT</a></p>
+    <video
       src="https://assets.objkt.media/file/assets-003/QmPwrY4jJMeCPtAvP6nLLNHC9ZyshRQkQK4f9zeVvSJ8nF/artifact"
       title="Digital Ripples on OBJKT 726711"
-      loading="lazy"
-      allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen
-      referrerpolicy="origin"
-      style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0;"
-    ></iframe>
-    <p style="margin:0; text-align:center;">View on <a href="https://objkt.com/tokens/hicetnunc/726711" target="_blank" rel="noopener noreferrer">OBJKT</a></p>
+      controls
+      playsinline
+      preload="metadata"
+      style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0; background:#000;"
+    ></video>
   </div>
   <div class="media-grid-item">
-    <iframe
+    <p style="margin:0; text-align:center;">If video does not appear, please view on <a href="https://objkt.com/tokens/hicetnunc/726715" target="_blank" rel="noopener noreferrer">OBJKT</a></p> 
+    <video
       src="https://assets.objkt.media/file/assets-003/Qmc4ub7mtMgo7ha5njWaeJsdmaTaxi5wScqZZcgZzuwWRF/artifact"
       title="Digital Ripples on OBJKT 726715"
-      loading="lazy"
-      allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen
-      referrerpolicy="origin"
-      style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0;"
-    ></iframe>
-    <p style="margin:0; text-align:center;">View on <a href="https://objkt.com/tokens/hicetnunc/726715" target="_blank" rel="noopener noreferrer">OBJKT</a></p>
+      controls
+      playsinline
+      preload="metadata"
+      style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0; background:#000;"
+    ></video>
   </div>
   <div class="media-grid-item">
-    <iframe
+    <p style="margin:0; text-align:center;">If video does not appear, please view on <a href="https://objkt.com/tokens/hicetnunc/726717" target="_blank" rel="noopener noreferrer">OBJKT</a></p>
+    <video
       src="https://assets.objkt.media/file/assets-003/QmVYXcBVoQqDdBss7hZ33UnjhBnhkDvEiEUafQ4CK8X5Hw/artifact"
       title="Digital Ripples on OBJKT 726717"
-      loading="lazy"
-      allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen
-      referrerpolicy="origin"
-      style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0;"
-    ></iframe>
-    <p style="margin:0; text-align:center;">View on <a href="https://objkt.com/tokens/hicetnunc/726717" target="_blank" rel="noopener noreferrer">OBJKT</a></p>
+      controls
+      playsinline
+      preload="metadata"
+      style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0; background:#000;"
+    ></video>
+
   </div>
 </div>
 
