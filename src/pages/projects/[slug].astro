@@ -32,7 +32,7 @@ const year = new Date(project.data.date).getFullYear();
 const allProjects = await loadProjects();
 const currentTagSet = new Set(collectProjectTags(splitProjects(allProjects).current));
 ---
-<BaseLayout title={`${project.data.title} | Kıvanç Tatar`} description={project.data.description}>
+<BaseLayout title={`${project.data.title} | Kıvanç Tatar`} description={project.data.description} noReferrer={project.data.noReferrer}>
   <article class="section content-card prose project-detail">
     <div class="card-topline">
       <p class="card-date">{year}</p>
