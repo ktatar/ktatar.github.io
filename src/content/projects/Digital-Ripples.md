@@ -22,6 +22,7 @@ An iterative design process was used in the work that the composition consists o
       controls
       playsinline
       preload="metadata"
+      referrerpolicy="no-referrer"
       style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0; background:#000;"
     ></video>
   </div>
@@ -33,6 +34,7 @@ An iterative design process was used in the work that the composition consists o
       controls
       playsinline
       preload="metadata"
+      referrerpolicy="no-referrer"
       style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0; background:#000;"
     ></video>
   </div>
@@ -44,6 +46,7 @@ An iterative design process was used in the work that the composition consists o
       controls
       playsinline
       preload="metadata"
+      referrerpolicy="no-referrer"
       style="display:block; width:100%; aspect-ratio:16/10; height:auto; border:0; background:#000;"
     ></video>
 
