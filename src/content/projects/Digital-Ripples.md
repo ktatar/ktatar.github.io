@@ -65,3 +65,4 @@ We acknowledge the support of the Canada Council for the Arts.
 | [Paul Paroczai](https://github.com/pparocza) | Sound Design |
 | [Esra Ozkan](https://esraozkan.art/) | Curator |
 | [Nancy Lee](https://www.nancylee.ca/) | Curator |
+| [Lucy Strauss](https://www.lucystrauss.com) | Technical Specialist |

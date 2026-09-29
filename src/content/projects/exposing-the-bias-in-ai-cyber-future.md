@@ -44,11 +44,7 @@ Through this lens, the performance becomes an act of exposure that renders the s
 
 ## Acknowledgement
 
-We acknowledge the support of the Canada Council for the Arts.
-
 The work was partially supported by <a href="https://www.wasp-hs.org/" rel="external nofollow noopener" target="_blank">the Wallenberg AI, Autonomous Systems and Software Program—Humanity and Society (WASP-HS)</a>, funded by the Marianne and Marcus Wallenberg Foundation and the Marcus and Amalia Wallenberg Foundation.
-
-I would like to thank Nancy Lee in conceptualization of this work.
 
 I would like to thank Priscilla Tissot for recommending the USA job statistic dataset for a taxonomy of ethinicities, and a list adjectives of aesthetic appraisals proposed in the work by
 Arvidsson (2009).
